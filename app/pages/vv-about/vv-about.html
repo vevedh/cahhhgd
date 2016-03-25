@@ -1,0 +1,41 @@
+<!--
+  Generated template for the VvAboutPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-navbar primary *navbar>
+    <ion-buttons left>
+        <button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-buttons>
+  <ion-title>A propos</ion-title>
+</ion-navbar>
+
+<ion-content padding class="vv-about">
+   <ion-list>
+        <!--<ion-item-sliding *ngFor="#pgapp of pgapps">-->
+            <ion-item *ngFor="#pgapp of pgapps">
+                <ion-thumbnail item-left>
+                    <img src="{{pgpath+pgapp.icon.link.replace('icon',pgapp.icon.filename)+'?auth_token='+token}}">
+                </ion-thumbnail>
+                <ion-label>
+                <h2>{{pgapp.title}}</h2>
+                <h3>Version:{{pgapp.version}}</h3>
+                <h4>Package :{{pgapp.package}}</h4>
+                <p>Id:{{pgapp.id}}</p>
+                </ion-label>
+                <button item-right (click)="downLoad(pgapp.install_url)">
+                    <ion-icon name="download"></ion-icon>
+                </button>
+            </ion-item>
+           <!-- <ion-item-options>
+                <button light (click)="downLoad(pgapp.install_url)">
+                    <ion-icon name="ios-more"></ion-icon>
+                    Plus
+                </button>
+            </ion-item-options>  
+        </ion-item-sliding>-->
+  </ion-list>
+</ion-content>

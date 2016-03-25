@@ -1,0 +1,25 @@
+
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Getting Started</ion-title>
+</ion-navbar>
+
+
+<ion-content padding class="getting-started">
+
+  <h3>Page de test Geolocatisation</h3>
+  <p>
+     Position : {{vvlat}} : {{vvlong}}
+  </p>
+  <p>
+    Device : {{udid}}
+  <p>
+    <button primary menuToggle>Toggle Menu</button>
+  </p>
+  <p>
+      <button primary (click)="getStorage()">GetStorage</button>
+  </p>
+
+</ion-content>

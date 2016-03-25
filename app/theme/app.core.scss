@@ -1,0 +1,24 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Shared Imports
+// --------------------------------------------------
+// These are the imports which make up the design of this app.
+// By default each design mode includes these shared imports.
+// App Shared Sass variables belong in app.variables.scss.
+
+
+@import "../components/loading-modal/loading-modal";
+
+ion-list-header.menu-header {
+    padding: 6px;
+    color: beige;
+    background-color: cornflowerblue;
+}
+
+img.hhhlogo {
+    /* height: 110px; */
+    width: 90%;
+    padding-left: 10%;
+    padding-right: 10%;
+}

@@ -1,0 +1,65 @@
+<!--
+  Generated template for the VvOs400Page page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-navbar primary *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>  
+  <ion-title>GESTION OS400</ion-title>
+</ion-navbar>
+
+<ion-content no-padding class="vv-os-400">
+   <ion-card *ngIf="showDev">
+       <ion-item primary>
+           <ion-avatar item-left>
+               <ion-icon name="settings"></ion-icon>
+           </ion-avatar>
+            <h2>Deblocage</h2>
+            <p>Utilisateur ou Ecran/Terminal</p>
+       </ion-item>
+       <hr/>
+       <ion-card-content>
+           <ion-item>
+               <ion-label>Nom :</ion-label>
+               <ion-input #dnom type="text" [(ngModel)]="devusr" (keyup)="dnom.value=dnom.value.toUpperCase()"></ion-input>
+           </ion-item>
+       </ion-card-content>
+       <hr/>
+      <ion-item>
+          <button item-left small (click)="doDblqUsr()" [disabled]="!(devusr!=null)">Utilisateur</button>
+           <button item-right small (click)="doDblqDev()" [disabled]="!(devusr!=null)">Ecran/Terminal</button>
+       </ion-item>
+   </ion-card>
+   <ion-list no-scroll>
+   <ion-item *ngIf="showPrint">
+       <ion-label>Nom :</ion-label>
+       <ion-input #prt type="text" [(ngModel)]="prtname" (keyup)="prt.value=prt.value.toUpperCase()" ></ion-input>
+       <ion-buttons item-right>
+           <button  small (click)="doLstPrinter()">Liste</button>
+       </ion-buttons>
+   </ion-item>
+   </ion-list>
+   <ion-list  *ngIf="showPrint">
+           <ion-item block *ngFor="#item of items" >
+           <h2>{{item[0] | uppercase}}({{item[2] | lowercase}})</h2>
+           <p>{{item[3] | uppercase}} | {{item[4] | uppercase}}</p>
+           <ion-segment padding item-right>
+               <ion-segment-button  small item-right primary>
+                   RLS
+               </ion-segment-button>
+               <ion-segment-button  small item-right danger>
+                   HLD
+               </ion-segment-button>
+               <ion-segment-button  small item-right secondary>
+                   RST
+               </ion-segment-button>
+           </ion-segment>
+          </ion-item>  
+   </ion-list>
+    <button fab fab-top fab-right (click)="doShowPrinter()" *ngIf="showDev"><ion-icon name="print" ></ion-icon></button>
+    <button fab fab-top fab-right (click)="showDev=true;showPrint=false" *ngIf="showPrint"><ion-icon name="settings" ></ion-icon></button>
+    <!--<button fab fab-bottom fab-right menuToggle><ion-icon name="menu" ></ion-icon></button>-->
+</ion-content>

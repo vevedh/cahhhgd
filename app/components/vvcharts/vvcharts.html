@@ -1,0 +1,13 @@
+<!--
+  Generated template for the Vvcharts component.
+
+  See https://angular.io/docs/ts/latest/api/core/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+<div align="center">
+  <p padding *ngIf="options==undefined">Construction du Graph en cours...</p>
+  <p padding *ngIf="options==undefined"><ion-spinner ></ion-spinner></p>
+  <h3 padding>{{text}}</h3>
+  <chart [(options)]="options" ></chart>
+  
+</div>

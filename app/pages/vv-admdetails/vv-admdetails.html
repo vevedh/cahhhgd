@@ -1,0 +1,41 @@
+<!--
+  Generated template for the VvAdmdetailsPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-navbar *navbar>
+  <ion-title>Détails Utilisateur</ion-title>
+</ion-navbar>
+
+<ion-content padding class="vv-admdetails">
+    <ion-item>
+        <div padding><font size="1">GUID : {{uuid}}</font></div>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Nom :</ion-label>
+        <ion-input type="text" [(ngModel)]="usrnom"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Prénom :</ion-label>
+        <ion-input type="text" [(ngModel)]="usrprenom"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>E-mail :</ion-label>
+        <ion-input type="email" [(ngModel)]="usremail"></ion-input>
+    </ion-item>
+    <ion-item>
+            <ion-icon name="key" item-left></ion-icon>
+            <ion-label>Niveau</ion-label>
+            <ion-select [(ngModel)]="etat" (change)="doSetSec()">
+                <ion-option value="INACTIF">INVITE</ion-option>
+                <ion-option value="ACTIF">CHIFFRES</ion-option>
+                <ion-option value="ADMIN">ADMIN</ion-option>
+                <ion-option value="SECOFF">ADMIN SUP</ion-option>
+            </ion-select>
+    </ion-item>
+    <div padding *ngIf="app.usermode != 'invite'">
+        <button (click)="doMemUser()" block>Memoriser...</button>
+    </div>
+
+</ion-content>

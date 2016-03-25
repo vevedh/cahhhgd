@@ -1,0 +1,32 @@
+<!--
+  Generated template for the VvLoginPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-navbar primary *navbar>
+  
+  <ion-title>Connexion au backoffice...</ion-title>
+</ion-navbar>
+
+<ion-content padding class="vv-login">
+    <ion-item *ngIf="isNotOk">
+        <h1>Patientez...</h1>
+        <p>
+            Vérifications de vos accès....
+        </p>  
+    </ion-item>
+    <p>
+        Procédure d'activation...
+        <br/><br/><br/>
+        Vérifications des accès....
+    </p>
+    <div padding *ngIf="firstConnect">
+        <button primary block (click)="doGenUuid()" >Générer un GUID</button>
+    </div>
+    <div padding *ngIf="regMode">
+        <button primary block (click)="doRegisterUser()" >Enregistrez vous svp</button>
+    </div>
+        
+    
+</ion-content>

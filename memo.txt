@@ -1,0 +1,91 @@
+cd CaHHHGD
+git init
+git add .
+git commit -m "Creation de appli CaHHHGD pour le groupe HO HI HEN"
+git remote add origin https://github.com/vevedh/cahhhgd.git
+# Sets the new remote
+git remote -v
+# Verifies the new remote URL
+git push -u origin master
+# envoyer un premier jeu de modification sur le remote
+
+// api d'accès a la messagerie exchange
+//https://github.com/gautamsi/ews-javascript-api
+npm install ews-javascript-api
+
+
+ionic security profiles add "Profile de securite CaHHHGD"
+ionic security profiles list
+ionic security credentials ios --profile profile_de_securite_cahhhgd -c D:\veve\mars2016\ios_distribution.p12 -p d@nZel77 -r D:\veve\mars2016\CaHHHGD.mobileprovision
+
+//pour android
+keytool -genkey -v -keystore d:\veve\android-veve.keystore -alias vevekey -keyalg RSA -keysize 2048 -validity 10000
+ionic security credentials android --profile profile_de_securite_cahhhgd -s d:\veve\android-veve.keystore -p d@nZel77 -k vevekey -w d@nZel77
+
+// partie authentification le 12/03/2016
+ionic upload --note "Version non modifi?e de ioni-conference-app le 12/03/2016"
+8cd3c73c-4bdd-407a-b247-eed71b696f11
+
+// dans le fichier angular2/src/fcade/promise.d.ts
+declare var Promise: PromiseConstructor;
+
+c2f0bacb-8322-49d4-abc7-9c1268ad9d00
+
+# Ionic projects currently ship with angular2@beta.6
+# for this we need a previous version of angular2-jwt
+npm install angular2-jwt@0.1.6 --save
+
+ionic upload --note "Version modifi?e avec authentification apps.ionic.io"
+
+ionic package build android --release --profile profile_de_securite_cahhhgd
+
+
+ionic package build ios --release --profile profile_de_securite_cahhhgd 
+
+ionic package list
+
+cordova-plugin-device
+cordova-plugin-console
+cordova-plugin-splashscreen
+cordova-plugin-statusbar
+ionic-plugin-keyboard
+cordova-sqlite-storage
+cordova-plugin-crosswalk-webview
+cordova-plugin-network-information
+cordova-plugin-geolocation
+
+
+alert.dismiss().then(() => {
+              this.nav.pop();
+            });
+            
+ionic upload --note "Version 1.0.1" --deploy=production
+
+cordova plugin add cordova-plugin-crosswalk-webview
+cordova plugin add cordova-sqlite-storage
+cordova plugin add cordova-plugin-device
+cordova plugin add cordova-plugin-geolocation
+cordova plugin add cordova-plugin-network-information
+ionic plugin add https://github.com/apache/cordova-plugin-whitelist.git
+
+adb install D:/vvtuto/platforms/android/build/outputs/apk/android-armv7-debug.apk
+
+
+    //"cordova-plugin-console": "1.0.2",
+    cordova-sqlite-storage
+    cordova-plugin-geolocation
+    cordova-plugin-network-information
+    "cordova-plugin-crosswalk-webview": "1.6.1",
+    "cordova-plugin-device": "1.1.1",
+    "cordova-plugin-splashscreen": "3.1.0",
+    "cordova-plugin-statusbar": "2.1.2",
+    "cordova-plugin-whitelist": "1.2.1",
+    "ionic-plugin-keyboard": "2.0.1"
+    
+    http://www.qrcode-monkey.com/
+    
+    http://3hservices.hhhgd.com/build/android/
+    http://3hservices.hhhgd.com/build/ios/
+    
+ npm install ionic-native --save
+ import {StatusBar} from 'ionic-native'   
